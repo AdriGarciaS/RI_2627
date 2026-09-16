@@ -1,0 +1,5 @@
+RI : Lab 01 
+
+Par atener los datos en la BD 
+- correr comando para conseguir las tabla (pdf lab1)
+Control copi y ejecutar -> 
