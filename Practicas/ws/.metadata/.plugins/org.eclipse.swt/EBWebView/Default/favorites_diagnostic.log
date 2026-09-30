@@ -26,3 +26,33 @@
 2026-09-24 11:10:43.764: [INFO] BookmarkModelLoaded, ids_reassigned: 0
 2026-09-24 11:10:43.764: [INFO] BookmarksLoadDropped droppedNodes=0
 2026-09-24 11:10:43.764: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-09-30 07:05:56.582: [INFO] CurrentProfilePath: C:\Users\adrig\Desktop\RI_2627\Practicas\ws\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-09-30 07:05:56.582: [INFO] Profiles total count: 1
+2026-09-30 07:05:56.582: [INFO] Profile: name=Perfil 1 path=C:\Users\adrig\Desktop\RI_2627\Practicas\ws\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-09-24T11:10:47.376Z
+2026-09-30 07:05:56.582: [INFO] LastUsedProfileDir: C:\Users\adrig\Desktop\RI_2627\Practicas\ws\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-09-30 07:05:56.582: [INFO] MostRecentlyActiveProfile: name=Perfil 1 path=C:\Users\adrig\Desktop\RI_2627\Practicas\ws\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-09-24T11:10:47.376Z
+2026-09-30 07:05:56.582: [INFO] OnDoneLoading sync enabled: 0
+2026-09-30 07:05:56.582: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-09-30 07:05:56.582: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-09-30 07:05:56.582: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-09-30 08:49:40.526: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-09-30 08:51:41.757: [INFO] CurrentProfilePath: C:\Users\adrig\Desktop\RI_2627\Practicas\ws\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-09-30 08:51:41.757: [INFO] Profiles total count: 1
+2026-09-30 08:51:41.758: [INFO] Profile: name=Perfil 1 path=C:\Users\adrig\Desktop\RI_2627\Practicas\ws\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-09-30T08:49:32.426Z
+2026-09-30 08:51:41.758: [INFO] LastUsedProfileDir: C:\Users\adrig\Desktop\RI_2627\Practicas\ws\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-09-30 08:51:41.758: [INFO] MostRecentlyActiveProfile: name=Perfil 1 path=C:\Users\adrig\Desktop\RI_2627\Practicas\ws\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-09-30T08:49:32.426Z
+2026-09-30 08:51:41.758: [INFO] OnDoneLoading sync enabled: 0
+2026-09-30 08:51:41.758: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-09-30 08:51:41.758: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-09-30 08:51:41.758: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-09-30 08:51:47.265: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-09-30 08:55:24.062: [INFO] CurrentProfilePath: C:\Users\adrig\Desktop\RI_2627\Practicas\ws\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-09-30 08:55:24.062: [INFO] Profiles total count: 1
+2026-09-30 08:55:24.062: [INFO] Profile: name=Perfil 1 path=C:\Users\adrig\Desktop\RI_2627\Practicas\ws\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-09-30T08:49:32.426Z
+2026-09-30 08:55:24.062: [INFO] LastUsedProfileDir: C:\Users\adrig\Desktop\RI_2627\Practicas\ws\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-09-30 08:55:24.062: [INFO] MostRecentlyActiveProfile: name=Perfil 1 path=C:\Users\adrig\Desktop\RI_2627\Practicas\ws\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-09-30T08:49:32.426Z
+2026-09-30 08:55:24.062: [INFO] OnDoneLoading sync enabled: 0
+2026-09-30 08:55:24.062: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-09-30 08:55:24.062: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-09-30 08:55:24.062: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-09-30 08:55:40.789: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1

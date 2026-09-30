@@ -1,5 +1,9 @@
 eclipse.preferences.version=1
+org.eclipse.jdt.core.codeComplete.visibilityCheck=enabled
 org.eclipse.jdt.core.compiler.codegen.targetPlatform=25
 org.eclipse.jdt.core.compiler.compliance=25
 org.eclipse.jdt.core.compiler.release=enabled
 org.eclipse.jdt.core.compiler.source=25
+org.eclipse.jdt.core.formatter.continuation_indentation=1
+org.eclipse.jdt.core.formatter.continuation_indentation_for_array_initializer=1
+org.eclipse.jdt.core.formatter.tabulation.char=space

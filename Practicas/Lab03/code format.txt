@@ -1,0 +1,18 @@
+  - Adjust Eclipse (formatting)
+    * Window > Preferences > General > Editors > Text Editor
+    * Check ' Show print margin ' 
+    * Print margin column: 120
+    * Window > Preferences > Java > Code Style > Formatter
+        * New > Profile Name CWS (for example)
+            - Indentation > Tab policy > Spaces only
+                      > Indentation size 4
+            - Line Wrapping > Max line width : 120
+                        > Default indentation for wrapped lines : 1
+                        > Default indentation for array initializers : 1
+    * Window > Preferences > Java > Editor > Save Actions
+        * Check ' Perform the selected actions on save '
+        * Check ' Organize imports '
+        * Check ' Additional actions '
+
+  - Use the fluent-interface pattern when writing code
+

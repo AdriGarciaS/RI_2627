@@ -2,5 +2,16 @@
 <workingSetManager>
 <workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1789542552877_0" label="Java Main Sources" name="Java Main Sources"/>
 <workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1789542552914_1" label="Java Test Sources" name="Java Test Sources"/>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1790752318492_3" label="cws2026" name="cws2026">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/cws2026" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/cws0" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/cws_client_cashier" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/cws_client_foreman" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/cws_client_manager" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/cws_client_mechanic" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/cws_service_interfaces" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/cws_service_tests" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/cws_util" type="4"/>
+</workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1789542558987_2" label="Window Working Set" name="Aggregate for window 1789542558987"/>
 </workingSetManager>

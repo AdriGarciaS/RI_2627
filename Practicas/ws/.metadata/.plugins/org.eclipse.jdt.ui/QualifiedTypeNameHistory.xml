@@ -1,2 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="uo.ri.util.assertion.ArgumentChecks"/>
+    <fullyQualifiedTypeName name="uo.ri.cws.application.service.ServiceFactoryImpl"/>
+    <fullyQualifiedTypeName name="java.util.Optional"/>
+    <fullyQualifiedTypeName name="uo.ri.cws.application.service.mechanic.MechanicCrudService.MechanicDto"/>
+    <fullyQualifiedTypeName name="uo.ri.conf.Factories"/>
+</qualifiedTypeNameHistroy>
