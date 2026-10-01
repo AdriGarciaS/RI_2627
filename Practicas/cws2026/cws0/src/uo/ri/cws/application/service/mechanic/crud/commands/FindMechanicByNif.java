@@ -10,32 +10,31 @@ import uo.ri.cws.application.service.mechanic.MechanicCrudService.MechanicDto;
 import uo.ri.util.assertion.ArgumentChecks;
 import uo.ri.util.jdbc.Jdbc;
 
-public class FindMechanicById {
-    
-    
-    private static final String TMECHANICS_FINDBYID = "select * from TMechanics where id = ?";
-    private String mechanicId;
+public class FindMechanicByNif {
 
-    public FindMechanicById (String id) {
-        ArgumentChecks.isNotNull(id , "Id can not be null to update a mechanic ");
+    private static final String TMECHANICS_FINDBYNIF = "select * from TMechanics where nif = ?";
+    private String mechanicNif;
+
+    public FindMechanicByNif (String nif) {
+        ArgumentChecks.isNotNull(nif , "Nif can not be null to update a mechanic ");
         
-        this.mechanicId = id;
+        this.mechanicNif = nif;
     }
     
-    Optional<MechanicDto> execute(){
+    public Optional<MechanicDto> execute(){
         Optional<MechanicDto> result = Optional.empty();
         
         try (Connection c = Jdbc.createThreadConnection()) {
             try (PreparedStatement pst = c
-                    .prepareStatement(TMECHANICS_FINDBYID)) {
-                pst.setString(1, mechanicId);
+                    .prepareStatement(TMECHANICS_FINDBYNIF)) {
+                pst.setString(1, mechanicNif);
                 try (ResultSet rs = pst.executeQuery()) {
                     if (rs.next()) {
                         MechanicDto dto = new MechanicDto();
                         dto.id= rs.getString("id");
                         dto.name = rs.getString("name");
                         dto.surname = rs.getString("surname");
-                        
+
                         result = Optional.of(dto) ;
                     }
                 }

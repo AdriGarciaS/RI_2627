@@ -11,6 +11,7 @@ import uo.ri.util.exception.BusinessException;
 import uo.ri.util.menu.Action;
 
 public class ListMechanicsAction implements Action {
+    
 	private MechanicCrudService service = Factories.service.forMechanicCrudService();
 
 	@Override

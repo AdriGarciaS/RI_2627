@@ -13,17 +13,17 @@ public class AddMechanicAction implements Action {
 	public void execute() throws BusinessException {
 
 		// Ask the user for data
-		MechanicDto m = new MechanicDto();
-		m.nif = Console.readString("Nif");
-		m.name = Console.readString("Name");
-		m.surname = Console.readString("Surname");
+		MechanicDto dto = new MechanicDto();
+		dto.nif = Console.readString("Nif");
+		dto.name = Console.readString("Name");
+		dto.surname = Console.readString("Surname");
 
 		// Invoke the service
 		MechanicCrudService as = Factories.service.forMechanicCrudService();
-		m = as.create( m );
+		dto = as.create( dto );
 
 		// Show result
-		Console.println("New mechanic added: " + m.id);
+		Console.println("New mechanic added: " + dto.id);
 	}
 
 }

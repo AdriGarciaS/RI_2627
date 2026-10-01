@@ -21,26 +21,23 @@ public class MechanicCrudServiceimpl implements MechanicCrudService {
 
     @Override
     public void update(MechanicDto dto) throws BusinessException {
-        // TODO Auto-generated method stub
+        new UpdateMechanic(dto).execute();
 
     }
 
     @Override
     public Optional<MechanicDto> findById(String id) throws BusinessException {
-        // TODO Auto-generated method stub
-        return Optional.empty();
+        return new FindMechanicById(id).execute();
     }
 
     @Override
     public Optional<MechanicDto> findByNif(String nif) throws BusinessException {
-        // TODO Auto-generated method stub
-        return Optional.empty();
+        return new FindMechanicByNif(nif).execute();
     }
 
     @Override
     public List<MechanicDto> findAll() throws BusinessException {
-        // TODO Auto-generated method stub
-        return null;
+        return new FindAllMechanic().execute();
     }
 
 }
