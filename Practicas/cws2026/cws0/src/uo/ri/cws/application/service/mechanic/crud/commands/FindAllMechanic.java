@@ -7,14 +7,16 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import uo.ri.cws.application.persistence.util.command.Command;
+import uo.ri.cws.application.persistence.util.jdbc.Jdbc;
 import uo.ri.cws.application.service.mechanic.MechanicCrudService.MechanicDto;
-import uo.ri.util.jdbc.Jdbc;
 
-public class FindAllMechanic {
+public class FindAllMechanic implements Command<List<MechanicDto>>{
 
     private static final String TMECHANICS_FIND_ALL =
         "SELECT id, version, nif, name, surname FROM TMechanics";
 
+    @Override
     public List<MechanicDto> execute() {
         List<MechanicDto> result = new ArrayList<>();
     

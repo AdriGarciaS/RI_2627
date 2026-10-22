@@ -4,12 +4,13 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+import uo.ri.cws.application.persistence.util.command.Command;
+import uo.ri.cws.application.persistence.util.jdbc.Jdbc;
 import uo.ri.cws.application.service.mechanic.MechanicCrudService.MechanicDto;
 import uo.ri.util.assertion.ArgumentChecks;
 import uo.ri.util.exception.BusinessException;
-import uo.ri.util.jdbc.Jdbc;
 
-public class UpdateMechanic {
+public class UpdateMechanic implements Command<Void>{
     
     private static final String TMECHANICS_UPDATE =
         "UPDATE TMechanics SET name = ?, surname = ? WHERE id = ?";
@@ -25,7 +26,8 @@ public class UpdateMechanic {
         this.dto = dto;
     }
 
-    public void execute() throws BusinessException {
+    @Override
+    public Void execute() throws BusinessException {
         try (Connection c = Jdbc.createThreadConnection();
              PreparedStatement pst = c.prepareStatement(TMECHANICS_UPDATE)) {
     
@@ -40,6 +42,7 @@ public class UpdateMechanic {
         } catch (SQLException e) {
             throw new RuntimeException(e);
     }
+        return null;
 }
 
 }

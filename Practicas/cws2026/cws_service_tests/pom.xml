@@ -19,7 +19,7 @@
 			<artifactId>cws_services_jpa</artifactId>
 			<artifactId>cws_services_jdbc</artifactId>
 -->
-			<artifactId>cws_services_jdbc</artifactId>
+			<artifactId>cws0</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 			<scope>test</scope>
 		</dependency>

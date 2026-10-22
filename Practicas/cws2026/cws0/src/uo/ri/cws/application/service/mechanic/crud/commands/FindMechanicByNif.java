@@ -6,11 +6,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Optional;
 
+import uo.ri.cws.application.persistence.util.command.Command;
+import uo.ri.cws.application.persistence.util.jdbc.Jdbc;
 import uo.ri.cws.application.service.mechanic.MechanicCrudService.MechanicDto;
 import uo.ri.util.assertion.ArgumentChecks;
-import uo.ri.util.jdbc.Jdbc;
 
-public class FindMechanicByNif {
+public class FindMechanicByNif implements Command<Optional<MechanicDto>>{
 
     private static final String TMECHANICS_FINDBYNIF = "select * from TMechanics where nif = ?";
     private String mechanicNif;
@@ -21,6 +22,7 @@ public class FindMechanicByNif {
         this.mechanicNif = nif;
     }
     
+    @Override
     public Optional<MechanicDto> execute(){
         Optional<MechanicDto> result = Optional.empty();
         

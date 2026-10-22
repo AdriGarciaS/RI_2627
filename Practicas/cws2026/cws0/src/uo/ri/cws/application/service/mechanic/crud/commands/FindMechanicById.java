@@ -1,49 +1,29 @@
 package uo.ri.cws.application.service.mechanic.crud.commands;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.Optional;
 
+import uo.ri.conf.Factories;
+import uo.ri.cws.application.persistence.mechanic.MechanicGateway;
+import uo.ri.cws.application.persistence.util.command.Command;
 import uo.ri.cws.application.service.mechanic.MechanicCrudService.MechanicDto;
+import uo.ri.cws.application.service.mechanic.crud.MechanicDtoAssembler;
 import uo.ri.util.assertion.ArgumentChecks;
-import uo.ri.util.jdbc.Jdbc;
+import uo.ri.util.exception.BusinessException;
 
-public class FindMechanicById {
-    
-    
-    private static final String TMECHANICS_FINDBYID = "select * from TMechanics where id = ?";
+public class FindMechanicById implements Command<Optional<MechanicDto>>{
+
     private String mechanicId;
+    private MechanicGateway mg = Factories.persistence.forMechanic();
 
     public FindMechanicById (String id) {
-        ArgumentChecks.isNotNull(id , "Id can not be null to update a mechanic ");
-        
+        ArgumentChecks.isNotBlank(id , "Id can not be blank to find a mechanic");
         this.mechanicId = id;
     }
-    
-    Optional<MechanicDto> execute(){
-        Optional<MechanicDto> result = Optional.empty();
-        
-        try (Connection c = Jdbc.createThreadConnection()) {
-            try (PreparedStatement pst = c
-                    .prepareStatement(TMECHANICS_FINDBYID)) {
-                pst.setString(1, mechanicId);
-                try (ResultSet rs = pst.executeQuery()) {
-                    if (rs.next()) {
-                        MechanicDto dto = new MechanicDto();
-                        dto.id= rs.getString("id");
-                        dto.name = rs.getString("name");
-                        dto.surname = rs.getString("surname");
-                        
-                        result = Optional.of(dto) ;
-                    }
-                }
-            }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-        return result;
+
+    @Override
+    public Optional<MechanicDto> execute() throws BusinessException {
+        return mg.findById(mechanicId)
+                .map(MechanicDtoAssembler::toDto);
     }
-    
+
 }

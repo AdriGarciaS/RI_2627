@@ -1,22 +1,23 @@
 package uo.ri.cws.application.service.mechanic.crud.commands;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.sql.Timestamp;
 import java.util.UUID;
 
+import uo.ri.conf.Factories;
+import uo.ri.cws.application.persistence.mechanic.MechanicGateway;
+import uo.ri.cws.application.persistence.mechanic.MechanicGateway.MechanicRecord;
+import uo.ri.cws.application.persistence.util.command.Command;
 import uo.ri.cws.application.service.mechanic.MechanicCrudService.MechanicDto;
+import uo.ri.cws.application.service.mechanic.crud.MechanicDtoAssembler;
 import uo.ri.util.assertion.ArgumentChecks;
-import uo.ri.util.jdbc.Jdbc;
+import uo.ri.util.assertion.BusinessChecks;
+import uo.ri.util.exception.BusinessException;
 
-public class AddMechanic {
+public class AddMechanic implements Command<MechanicDto>{
     
-    private static final String TMECHANICS_ADD = "insert into TMechanics (id, nif, name, surname, version, createdAt, "
-        + "updatedAt, entityState) values (?, ?, ?, ?, ?, ?, ?, ?)";
 
+    private MechanicDto m = new MechanicDto();
     
-    private MechanicDto m = new MechanicDto();;
+    private MechanicGateway mg  = Factories.persistence.forMechanic();
 
 
     public AddMechanic(MechanicDto dto) {
@@ -34,25 +35,18 @@ public class AddMechanic {
 
    
     
-    public MechanicDto execute() {
-       
-        try (Connection c = Jdbc.createThreadConnection();) {
-            try (PreparedStatement pst = c.prepareStatement(TMECHANICS_ADD)) {
-                pst.setString(1, m.id);
-                pst.setString(2, m.nif);
-                pst.setString(3, m.name);
-                pst.setString(4, m.surname);
-                pst.setLong(5, m.version);
-                pst.setTimestamp(6, new Timestamp(System.currentTimeMillis()));
-                pst.setTimestamp(7, new Timestamp(System.currentTimeMillis()));
-                pst.setString(8, "ENABLED");               
-
-                pst.executeUpdate();
-
-            }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+    @Override
+    public MechanicDto execute() throws BusinessException {
+        
+        BusinessChecks.doesNotExist(mg.findByNif(m.nif),
+            "There is already a mechanic with that nif");
+        
+        MechanicRecord record = MechanicDtoAssembler.toRecord(m);
+        mg.add(record );
+        
+        m.id = record.id;
+        m.version = record.version;
+        
         
         return m;
     }
